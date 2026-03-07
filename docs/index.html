@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PaNic's Calculator</title>
+  <title>PaNic's Calculators</title>
 </head>
 <body>
-  <h1>PaNic's Calculator</h1>
+  <h1>PaNic's Calculators</h1>
 
   <h2>Number Theory</h2>
 
@@ -16,7 +16,7 @@
   <p>a + b: <span id="sum_result"></span></p>
 
   <h3>Modular Exponent</h3>
-  <p>Complexity: O(log b) multiplications modulo m</p>
+  <p>Complexity: O(log b) multiplications modulo m.</p>
   <input id="modex_a" type="number" placeholder="a">
   <input id="modex_b" type="number" placeholder="b">
   <input id="modex_m" type="number" placeholder="m">
@@ -24,7 +24,7 @@
   <p>a^b mod m: <span id="modex_result"></span></p>
 
   <h3>Prime Test</h3>
-  <p>Algorithm: 16 iterations of Miller-Rabin to bases depending on the candidate itself</p>
+  <p>Algorithm: 16 iterations of Miller-Rabin to bases depending on the candidate itself.</p>
   <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. BPSW is implemented there)</p>
   <input id="prime_n" type="number" placeholder="n">
   <button id="prime_button">Compute</button>
@@ -40,18 +40,21 @@
   <h2>Combinatorics</h2>
 
   <h3>Partition</h3>
+  <p>Complexity: O(a^1.5) additions modulo m.</p>
   <input id="partition_a" type="number" placeholder="a">
   <input id="partition_m" type="number" placeholder="m">
   <button id="partition_button">Compute</button>
   <p>p(a) mod m: <span id="partition_result"></span></p>
 
   <h3>Factorial</h3>
+  <p>Complexity: O(a) multiplications modulo m.</p>
   <input id="factorial_a" type="number" placeholder="a">
   <input id="factorial_m" type="number" placeholder="m">
   <button id="factorial_button">Compute</button>
   <p>p(a) mod m: <span id="factorial_result"></span></p>
 
   <h3>Derangement</h3>
+  <p>Complexity: O(a) multiplications modulo m.</p>
   <input id="derangement_a" type="number" placeholder="a">
   <input id="derangement_m" type="number" placeholder="m">
   <button id="derangement_button">Compute</button>
