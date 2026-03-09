@@ -1,4 +1,4 @@
-import init, { sum, gcd_string, lcm_string, kronecker_symbol_string, modex_string, geometric_series_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, binomial_greater_string } from "../pkg/panic_calculators.js";
+import init, { sum, gcd_string, lcm_string, kronecker_symbol_string, modex_string, geometric_series_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, permutation_string, fibonacci_string, binomial_greater_string } from "../pkg/panic_calculators.js";
 
 async function run() {
   await init();
@@ -134,6 +134,32 @@ async function run() {
     } catch (err) {
       document.getElementById("derangement_a").reportValidity();
       document.getElementById("derangement_m").reportValidity();
+    }
+  };
+
+  document.getElementById("permutation_button").onclick = () => {
+    try {
+      const a = document.getElementById("permutation_a").value;
+      const b = document.getElementById("permutation_b").value;
+      const m = document.getElementById("permutation_m").value;
+      const result = permutation_string(a, b, m);
+      document.getElementById("permutation_result").textContent = result;
+    } catch (err) {
+      document.getElementById("permutation_a").reportValidity();
+      document.getElementById("permutation_b").reportValidity();
+      document.getElementById("permutation_m").reportValidity();
+    }
+  };
+
+  document.getElementById("fibonacci_button").onclick = () => {
+    try {
+      const a = document.getElementById("fibonacci_a").value;
+      const m = document.getElementById("fibonacci_m").value;
+      const result = fibonacci_string(a, m);
+      document.getElementById("fibonacci_result").textContent = result;
+    } catch (err) {
+      document.getElementById("fibonacci_a").reportValidity();
+      document.getElementById("fibonacci_m").reportValidity();
     }
   };
 
