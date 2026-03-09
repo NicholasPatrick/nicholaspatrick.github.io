@@ -1,4 +1,4 @@
-import init, { sum, modex_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, binomial_greater_string } from "../pkg/panic_calculators.js";
+import init, { sum, gcd_string, lcm_string, kronecker_symbol_string, modex_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, binomial_greater_string } from "../pkg/panic_calculators.js";
 
 async function run() {
   await init();
@@ -12,6 +12,42 @@ async function run() {
     } catch (err) {
       document.getElementById("sum_a").reportValidity();
       document.getElementById("sum_b").reportValidity();
+    }
+  };
+
+  document.getElementById("gcd_button").onclick = () => {
+    try {
+      const a = document.getElementById("gcd_a").value;
+      const b = document.getElementById("gcd_b").value;
+      const result = gcd_string(a, b);
+      document.getElementById("gcd_result").textContent = result;
+    } catch (err) {
+      document.getElementById("gcd_a").reportValidity();
+      document.getElementById("gcd_b").reportValidity();
+    }
+  };
+
+  document.getElementById("lcm_button").onclick = () => {
+    try {
+      const a = document.getElementById("lcm_a").value;
+      const b = document.getElementById("lcm_b").value;
+      const result = lcm_string(a, b);
+      document.getElementById("lcm_result").textContent = result;
+    } catch (err) {
+      document.getElementById("lcm_a").reportValidity();
+      document.getElementById("lcm_b").reportValidity();
+    }
+  };
+
+  document.getElementById("kronecker_button").onclick = () => {
+    try {
+      const a = document.getElementById("kronecker_a").value;
+      const b = document.getElementById("kronecker_b").value;
+      const result = kronecker_symbol_string(a, b);
+      document.getElementById("kronecker_result").textContent = result;
+    } catch (err) {
+      document.getElementById("kronecker_a").reportValidity();
+      document.getElementById("kronecker_b").reportValidity();
     }
   };
 
