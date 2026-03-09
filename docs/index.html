@@ -6,60 +6,81 @@
 </head>
 <body>
   <h1>PaNic's Calculators</h1>
+  <div style="column-count: 3; ">
+  
+  <div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column;">
+    <h2>Number Theory</h2>
 
-  <h2>Number Theory</h2>
+    <h3>Sum</h3>
+    <input id="sum_a" type="text" pattern="\d+" placeholder="a">
+    <input id="sum_b" type="text" pattern="\d+" placeholder="b">
+    <button id="sum_button">Compute</button>
+    <p>a + b: <span id="sum_result"></span></p>
 
-  <h3>Sum</h3>
-  <input id="sum_a" type="text" pattern="\d+" placeholder="a">
-  <input id="sum_b" type="text" pattern="\d+" placeholder="b">
-  <button id="sum_button">Compute</button>
-  <p>a + b: <span id="sum_result"></span></p>
+    <h3>Modular Exponent</h3>
+    <p>Complexity: O(log b) multiplications modulo m.</p>
+    <input id="modex_a" type="text" pattern="\d+" placeholder="a">
+    <input id="modex_b" type="text" pattern="\d+" placeholder="b">
+    <input id="modex_m" type="text" pattern="\d+" placeholder="m">
+    <button id="modex_button">Compute</button>
+    <p>a^b mod m: <span id="modex_result"></span></p>
 
-  <h3>Modular Exponent</h3>
-  <p>Complexity: O(log b) multiplications modulo m.</p>
-  <input id="modex_a" type="text" pattern="\d+" placeholder="a">
-  <input id="modex_b" type="text" pattern="\d+" placeholder="b">
-  <input id="modex_m" type="text" pattern="\d+" placeholder="m">
-  <button id="modex_button">Compute</button>
-  <p>a^b mod m: <span id="modex_result"></span></p>
+    <h3>Prime Test</h3>
+    <p>Algorithm: 16 iterations of Miller-Rabin to bases depending on the candidate itself.</p>
+    <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. BPSW is implemented there)</p>
+    <input id="prime_n" type="text" pattern="\d+" placeholder="n">
+    <button id="prime_button">Compute</button>
+    <p>Result: <span id="prime_result"></span></p>
 
-  <h3>Prime Test</h3>
-  <p>Algorithm: 16 iterations of Miller-Rabin to bases depending on the candidate itself.</p>
-  <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. BPSW is implemented there)</p>
-  <input id="prime_n" type="text" pattern="\d+" placeholder="n">
-  <button id="prime_button">Compute</button>
-  <p>Result: <span id="prime_result"></span></p>
+    <h3>Factorise</h3>
+    <p>Algorithm: a million Pollard-Brent iterations before giving up. ECM yet to be implemented.</p>
+    <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. ECM and SIQS are implemented there)</p>
+    <input id="factor_n" type="text" pattern="\d+" placeholder="n">
+    <button id="factor_button">Compute</button>
+    <p>Result: <span id="factor_result"></span></p>
+  </div>
 
-  <h3>Factorise</h3>
-  <p>Algorithm: a million Pollard-Brent iterations before giving up. ECM yet to be implemented.</p>
-  <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. ECM and SIQS are implemented there)</p>
-  <input id="factor_n" type="text" pattern="\d+" placeholder="n">
-  <button id="factor_button">Compute</button>
-  <p>Result: <span id="factor_result"></span></p>
-
+  <div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column;">
   <h2>Combinatorics</h2>
 
-  <h3>Partition</h3>
-  <p>Complexity: O(a^1.5) additions modulo m.</p>
-  <input id="partition_a" type="text" pattern="\d+" placeholder="a">
-  <input id="partition_m" type="text" pattern="\d+" placeholder="m">
-  <button id="partition_button">Compute</button>
-  <p>p(a) mod m: <span id="partition_result"></span></p>
+    <h3>Partition</h3>
+    <p>Complexity: O(a^1.5) additions modulo m.</p>
+    <input id="partition_a" type="text" pattern="\d+" placeholder="a">
+    <input id="partition_m" type="text" pattern="\d+" placeholder="m">
+    <button id="partition_button">Compute</button>
+    <p>p(a) mod m: <span id="partition_result"></span></p>
 
-  <h3>Factorial</h3>
-  <p>Complexity: O(a) multiplications modulo m.</p>
-  <input id="factorial_a" type="text" pattern="\d+" placeholder="a">
-  <input id="factorial_m" type="text" pattern="\d+" placeholder="m">
-  <button id="factorial_button">Compute</button>
-  <p>p(a) mod m: <span id="factorial_result"></span></p>
+    <h3>Factorial</h3>
+    <p>Complexity: O(a) multiplications modulo m.</p>
+    <input id="factorial_a" type="text" pattern="\d+" placeholder="a">
+    <input id="factorial_m" type="text" pattern="\d+" placeholder="m">
+    <button id="factorial_button">Compute</button>
+    <p>p(a) mod m: <span id="factorial_result"></span></p>
 
-  <h3>Derangement</h3>
-  <p>Complexity: O(a) multiplications modulo m.</p>
-  <input id="derangement_a" type="text" pattern="\d+" placeholder="a">
-  <input id="derangement_m" type="text" pattern="\d+" placeholder="m">
-  <button id="derangement_button">Compute</button>
-  <p>p(a) mod m: <span id="derangement_result"></span></p>
+    <h3>Derangement</h3>
+    <p>Complexity: O(a) multiplications modulo m.</p>
+    <input id="derangement_a" type="text" pattern="\d+" placeholder="a">
+    <input id="derangement_m" type="text" pattern="\d+" placeholder="m">
+    <button id="derangement_button">Compute</button>
+    <p>p(a) mod m: <span id="derangement_result"></span></p>
 
-  <script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>
+  </div>
+
+  <div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column;">
+  <h2>Statistics</h2>
+
+    <h3>Binomial Greater</h3>
+    <p>Given n independent events of probability p each, what's the probability that at least k happen.</p>
+    <p>Error should be small but no guarantees.</p>
+    <input id="binomial_greater_n" type="text" pattern="\d+" placeholder="n">
+    <input id="binomial_greater_k" type="text" pattern="\d+" placeholder="k">
+    <input id="binomial_greater_p" type="text" placeholder="p">
+    <button id="binomial_greater_button">Compute</button>
+    <p>Result: <span id="binomial_greater_result"></span></p>
+
+    <script type="module" src="main.js"></script>
+  </div>
+  </div>
 </body>
 </html>

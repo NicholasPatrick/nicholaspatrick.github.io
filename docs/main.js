@@ -1,4 +1,4 @@
-import init, { sum, modex_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string } from "../pkg/panic_calculators.js";
+import init, { sum, modex_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, binomial_greater_string } from "../pkg/panic_calculators.js";
 
 async function run() {
   await init();
@@ -82,6 +82,20 @@ async function run() {
     } catch (err) {
       document.getElementById("derangement_a").reportValidity();
       document.getElementById("derangement_m").reportValidity();
+    }
+  };
+
+  document.getElementById("binomial_greater_button").onclick = () => {
+    try {
+      const n = document.getElementById("binomial_greater_n").value;
+      const k = document.getElementById("binomial_greater_k").value;
+      const p = document.getElementById("binomial_greater_p").value;
+      const result = binomial_greater_string(n, k, p);
+      document.getElementById("binomial_greater_result").textContent = result;
+    } catch (err) {
+      document.getElementById("binomial_greater_n").reportValidity();
+      document.getElementById("binomial_greater_k").reportValidity();
+      document.getElementById("binomial_greater_p").reportValidity();
     }
   };
 }
