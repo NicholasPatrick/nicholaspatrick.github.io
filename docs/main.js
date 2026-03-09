@@ -1,4 +1,4 @@
-import init, { sum, gcd_string, lcm_string, kronecker_symbol_string, modex_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, binomial_greater_string } from "../pkg/panic_calculators.js";
+import init, { sum, gcd_string, lcm_string, kronecker_symbol_string, modex_string, geometric_series_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, binomial_greater_string } from "../pkg/panic_calculators.js";
 
 async function run() {
   await init();
@@ -62,6 +62,22 @@ async function run() {
       document.getElementById("modex_a").reportValidity();
       document.getElementById("modex_b").reportValidity();
       document.getElementById("modex_m").reportValidity();
+    }
+  };
+
+  document.getElementById("geometric_series_button").onclick = () => {
+    try {
+      const a = document.getElementById("geometric_series_a").value;
+      const r = document.getElementById("geometric_series_r").value;
+      const n = document.getElementById("geometric_series_n").value;
+      const m = document.getElementById("geometric_series_m").value;
+      const result = geometric_series_string(a, r, n, m);
+      document.getElementById("geometric_series_result").textContent = result;
+    } catch (err) {
+      document.getElementById("geometric_series_a").reportValidity();
+      document.getElementById("geometric_series_r").reportValidity();
+      document.getElementById("geometric_series_n").reportValidity();
+      document.getElementById("geometric_series_m").reportValidity();
     }
   };
 

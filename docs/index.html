@@ -44,6 +44,16 @@
     <button id="modex_button">Compute</button>
     <p>a^b mod m: <span id="modex_result"></span></p>
 
+    <h3>Geometric Series</h3>
+    <p>Compute a + ar + ar^2 + … (n terms) mod m.</p>
+    <p>Complexity: O(log n) multiplications modulo m.</p>
+    <input id="geometric_series_a" type="text" pattern="\d+" placeholder="a">
+    <input id="geometric_series_r" type="text" pattern="\d+" placeholder="r">
+    <input id="geometric_series_n" type="text" pattern="\d+" placeholder="n">
+    <input id="geometric_series_m" type="text" pattern="\d+" placeholder="m">
+    <button id="geometric_series_button">Compute</button>
+    <p>a + ar + ar^2 + … (n terms) mod m: <span id="geometric_series_result"></span></p>
+
     <h3>Prime Test</h3>
     <p>Algorithm: 16 iterations of Miller-Rabin to bases depending on the candidate itself.</p>
     <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. BPSW is implemented there)</p>
@@ -74,14 +84,14 @@
     <input id="factorial_a" type="text" pattern="\d+" placeholder="a">
     <input id="factorial_m" type="text" pattern="\d+" placeholder="m">
     <button id="factorial_button">Compute</button>
-    <p>p(a) mod m: <span id="factorial_result"></span></p>
+    <p>a! mod m: <span id="factorial_result"></span></p>
 
     <h3>Derangement</h3>
     <p>Complexity: O(a) multiplications modulo m.</p>
     <input id="derangement_a" type="text" pattern="\d+" placeholder="a">
     <input id="derangement_m" type="text" pattern="\d+" placeholder="m">
     <button id="derangement_button">Compute</button>
-    <p>p(a) mod m: <span id="derangement_result"></span></p>
+    <p>!a mod m: <span id="derangement_result"></span></p>
 
     <script type="module" src="main.js"></script>
   </div>
