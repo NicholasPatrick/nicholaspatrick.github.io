@@ -1,5 +1,9 @@
 import init, { sum, gcd_string, lcm_string, kronecker_symbol_string, modex_string, geometric_series_string, is_prime_string, factor_string, partition_string, factorial_string, derangement_string, permutation_string, fibonacci_string, binomial_greater_string } from "../pkg/panic_calculators.js";
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
+
 async function run() {
   await init();
 
