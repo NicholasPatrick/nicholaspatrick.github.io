@@ -13,59 +13,59 @@
     <h2>Number Theory</h2>
 
     <h3>Sum</h3>
-    <input id="sum_a" type="text" pattern="\d+" placeholder="a">
-    <input id="sum_b" type="text" pattern="\d+" placeholder="b">
+    <input id="sum_a" type="text" placeholder="a">
+    <input id="sum_b" type="text" placeholder="b">
     <button id="sum_button">Compute</button>
     <p>a + b: <span id="sum_result"></span></p>
 
     <h3>GCD</h3>
-    <input id="gcd_a" type="text" pattern="\d+" placeholder="a">
-    <input id="gcd_b" type="text" pattern="\d+" placeholder="b">
+    <input id="gcd_a" type="text" placeholder="a">
+    <input id="gcd_b" type="text" placeholder="b">
     <button id="gcd_button">Compute</button>
     <p>gcd(a, b): <span id="gcd_result"></span></p>
 
     <h3>LCM</h3>
-    <input id="lcm_a" type="text" pattern="\d+" placeholder="a">
-    <input id="lcm_b" type="text" pattern="\d+" placeholder="b">
+    <input id="lcm_a" type="text" placeholder="a">
+    <input id="lcm_b" type="text" placeholder="b">
     <button id="lcm_button">Compute</button>
     <p>lcm(a, b): <span id="lcm_result"></span></p>
 
     <h3>Kronecker Symbol</h3>
     <p>A generalisation of Legendre and Jacobi Symbol</p>
-    <input id="kronecker_a" type="text" pattern="\d+" placeholder="a">
-    <input id="kronecker_b" type="text" pattern="\d+" placeholder="b">
+    <input id="kronecker_a" type="text" placeholder="a">
+    <input id="kronecker_b" type="text" placeholder="b">
     <button id="kronecker_button">Compute</button>
     <p>(a|b): <span id="kronecker_result"></span></p>
 
     <h3>Modular Exponent</h3>
     <p>Complexity: O(log b) multiplications modulo m.</p>
-    <input id="modex_a" type="text" pattern="\d+" placeholder="a">
-    <input id="modex_b" type="text" pattern="\d+" placeholder="b">
-    <input id="modex_m" type="text" pattern="\d+" placeholder="m">
+    <input id="modex_a" type="text" placeholder="a">
+    <input id="modex_b" type="text" placeholder="b">
+    <input id="modex_m" type="text" placeholder="m">
     <button id="modex_button">Compute</button>
     <p>a^b mod m: <span id="modex_result"></span></p>
 
     <h3>Geometric Series</h3>
     <p>Compute a + ar + ar^2 + … (n terms) mod m.</p>
     <p>Complexity: O(log n) multiplications modulo m.</p>
-    <input id="geometric_series_a" type="text" pattern="\d+" placeholder="a">
-    <input id="geometric_series_r" type="text" pattern="\d+" placeholder="r">
-    <input id="geometric_series_n" type="text" pattern="\d+" placeholder="n">
-    <input id="geometric_series_m" type="text" pattern="\d+" placeholder="m">
+    <input id="geometric_series_a" type="text" placeholder="a">
+    <input id="geometric_series_r" type="text" placeholder="r">
+    <input id="geometric_series_n" type="text" placeholder="n">
+    <input id="geometric_series_m" type="text" placeholder="m">
     <button id="geometric_series_button">Compute</button>
     <p>a + ar + ar^2 + … (n terms) mod m: <span id="geometric_series_result"></span></p>
 
     <h3>Prime Test</h3>
     <p>Algorithm: 16 iterations of Miller-Rabin to bases depending on the candidate itself.</p>
     <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. BPSW is implemented there)</p>
-    <input id="prime_n" type="text" pattern="\d+" placeholder="n">
+    <input id="prime_n" type="text" placeholder="n">
     <button id="prime_button">Compute</button>
     <p>Result: <span id="prime_result"></span></p>
 
     <h3>Factorise</h3>
     <p>Algorithm: a million Pollard-Brent iterations before giving up. ECM yet to be implemented.</p>
     <p>(<a target="_blank" rel="noopener noreferrer" href="https://www.alpertron.com.ar/ECM.HTM">Alpertron's web calculator</a> is better. ECM and SIQS are implemented there)</p>
-    <input id="factor_n" type="text" pattern="\d+" placeholder="n">
+    <input id="factor_n" type="text" placeholder="n">
     <button id="factor_button">Compute</button>
     <p>Result: <span id="factor_result"></span></p>
   </div>
@@ -75,37 +75,37 @@
 
     <h3>Partition</h3>
     <p>Complexity: O(a^1.5) additions modulo m.</p>
-    <input id="partition_a" type="text" pattern="\d+" placeholder="a">
-    <input id="partition_m" type="text" pattern="\d+" placeholder="m">
+    <input id="partition_a" type="text" placeholder="a">
+    <input id="partition_m" type="text" placeholder="m">
     <button id="partition_button">Compute</button>
     <p>p(a) mod m: <span id="partition_result"></span></p>
 
     <h3>Factorial</h3>
     <p>Complexity: O(a) multiplications modulo m.</p>
-    <input id="factorial_a" type="text" pattern="\d+" placeholder="a">
-    <input id="factorial_m" type="text" pattern="\d+" placeholder="m">
+    <input id="factorial_a" type="text" placeholder="a">
+    <input id="factorial_m" type="text" placeholder="m">
     <button id="factorial_button">Compute</button>
     <p>a! mod m: <span id="factorial_result"></span></p>
 
     <h3>Derangement</h3>
     <p>Complexity: O(a) multiplications modulo m.</p>
-    <input id="derangement_a" type="text" pattern="\d+" placeholder="a">
-    <input id="derangement_m" type="text" pattern="\d+" placeholder="m">
+    <input id="derangement_a" type="text" placeholder="a">
+    <input id="derangement_m" type="text" placeholder="m">
     <button id="derangement_button">Compute</button>
     <p>!a mod m: <span id="derangement_result"></span></p>
 
     <h3>Permutation</h3>
     <p>Complexity: O(b) multiplications modulo m.</p>
-    <input id="permutation_a" type="text" pattern="\d+" placeholder="a">
-    <input id="permutation_b" type="text" pattern="\d+" placeholder="b">
-    <input id="permutation_m" type="text" pattern="\d+" placeholder="m">
+    <input id="permutation_a" type="text" placeholder="a">
+    <input id="permutation_b" type="text" placeholder="b">
+    <input id="permutation_m" type="text" placeholder="m">
     <button id="permutation_button">Compute</button>
     <p>a P b mod m: <span id="permutation_result"></span></p>
 
     <h3>Fibonacci</h3>
     <p>Complexity: O(log a) multiplications modulo m.</p>
-    <input id="fibonacci_a" type="text" pattern="\d+" placeholder="a">
-    <input id="fibonacci_m" type="text" pattern="\d+" placeholder="m">
+    <input id="fibonacci_a" type="text" placeholder="a">
+    <input id="fibonacci_m" type="text" placeholder="m">
     <button id="fibonacci_button">Compute</button>
     <p>F(a) mod m: <span id="fibonacci_result"></span></p>
 
